@@ -42,7 +42,7 @@ function Login(props) {
         window.location.reload();
       })
       .catch(() => {
-        setStatus(`Error:  There was an error trying to login. `);
+        setStatus(`Error:  Can't login. `);
       });
 
     if (isLoggedIn) {

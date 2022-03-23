@@ -29,12 +29,12 @@ function AllData() {
       label: "Email",
       field: "email",
       width: 150,
-    },
+    }/*,
     {
-      label: "Role",
+      label: "User Type",
       field: "role",
       width: 150,
-    },
+    },*/
   ];
 
   useEffect(() => {
@@ -70,8 +70,8 @@ function AllData() {
           acct: user.acct,
           firstName: user.firstName,
           lastName: user.lastName,
-          email: user.email,
-          role: user.roles,
+          email: user.email/*,
+          role: user.roles,*/
         };
         tempRows.push(t);
       }
@@ -83,7 +83,7 @@ function AllData() {
     <>
       {currentUser ? (
         <Card
-          header="All Data"
+          header="All User Data"
           className="card brand-centered brand-margin-top"
           maxWidth="50rem"
           body={
@@ -92,14 +92,14 @@ function AllData() {
                 <MDBDataTableV5
                   hover
                   striped
-                  searchTop
+                  //searchTop
                   searchBottom={false}
-                  entriesOptions={[5, 10, 15]} //drop down for num records per page
-                  entries={5} //entries per page
+                  //entriesOptions={[5, 10, 15]} //drop down for num records per page
+                  /*entries={5} //entries per page
                   sorting={false}
                   pagesAmount={5}
                   paginationLabel={["Previous", "Next"]}
-                  data={{ columns, rows }}
+                  */data={{ columns, rows }}
                 />
               </div>
             </>

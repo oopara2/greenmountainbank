@@ -52,7 +52,7 @@ function Deposit() {
     }
 
     if (amt !== "" && amt !== "-" && !Number(amt)) {
-      setStatus("Error: Please introduce numbers only");
+      setStatus("Error!!!! Please enter numeric values");
       setIsSuccess(false);
       return setValidTransaction(false);
     }
@@ -80,7 +80,7 @@ function Deposit() {
 
   const handleSubmit = (event) => {
     let newBalance = balance + amount;
-    console.log("newBalance: " + newBalance);
+    console.log("Balance: " + newBalance);
     UserService.updateUserBalance(
       currentUser.id,
       amount,

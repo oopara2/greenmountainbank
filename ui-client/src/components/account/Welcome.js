@@ -15,12 +15,12 @@ const Welcome = () => {
   const [transList, setTransList] = useState([]);
   const columns = [
     {
-      label: "Trans Number",
+      label: "Transaction Code",
       field: "tranNumber",
       width: 150,
     },
     {
-      label: "Trans Type",
+      label: "Type of Transaction",
       field: "tranType",
       width: 150,
     },
@@ -143,21 +143,20 @@ const Welcome = () => {
               <div className="container">
                 <div className="row">
                   <h6>
-                    <FontAwesomeIcon icon={solid.faReceipt} size="lg" /> Recent
-                    Transactions
+                    History
                   </h6>
                 </div>
                 <div className="row">
                   <MDBDataTableV5
                     hover
                     striped
-                    searchTop
+                   // searchTop
                     searchBottom={false}
-                    entriesOptions={[5, 10, 15]} //drop down for num records per page
-                    entries={5} //entries per page
-                    sorting={false}
-                    pagesAmount={5}
-                    paginationLabel={["Previous", "Next"]}
+                   // entriesOptions={[5, 10, 15]} //drop down for num records per page
+                    //entries={5} //entries per page
+                    //sorting={false}
+                    //pagesAmount={5}
+                    //paginationLabel={["Previous", "Next"]}
                     data={{ columns, rows }}
                   />
                 </div>

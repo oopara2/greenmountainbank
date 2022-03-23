@@ -30,7 +30,7 @@ function AccountForm(props) {
             type="input"
             className="form-control"
             id="firstName"
-            placeholder="First Name"
+            placeholder="Please enter your first name"
             value={props.firstName}
             onChange={props.handleFirstNameChange}
           />
@@ -40,15 +40,15 @@ function AccountForm(props) {
             type="input"
             className="form-control"
             id="lastName"
-            placeholder="Last Name"
+            placeholder="Please enter your last naame"
             value={props.lastName}
             onChange={props.handleLastNameChange}
           />
           <br />
-          Date of Birth: <br />
+          DOB: <br />
           <DatePicker
             className="form-control"
-            placeholderText="Date of Birth"
+            placeholderText="Please input your DOB"
             renderCustomHeader={({
               date,
               changeYear,
@@ -115,7 +115,7 @@ function AccountForm(props) {
         type="input"
         className="form-control"
         id="email"
-        placeholder="Enter email"
+        placeholder="Please enter your email"
         value={props.email}
         onChange={props.handleEmailChange}
       />
@@ -125,12 +125,12 @@ function AccountForm(props) {
         type="password"
         className="form-control"
         id="password"
-        placeholder="Enter password"
+        placeholder="Please enter your password"
         value={props.password}
         onChange={props.handlePasswordChange}
       />
       <br />
-      <div className="container my-3 bg-light">
+      <div className="container my-3 bg-success text-white">
         <div className="col-md-12 text-center">
           <button
             type="submit"

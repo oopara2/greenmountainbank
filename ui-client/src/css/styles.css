@@ -11,7 +11,7 @@
 
 .home-background::before {
   content: "";
-  background-image: url("/src/img/bank-couple.jpg");
+  background-image: url("/src/img/valley.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -147,7 +147,7 @@
 #navbarNav ul li a:before {
   /*transition: all 0.5s;*/
   backface-visibility: hidden;
-  border: 2px solid rgba(#105a01, 0);
+  border: 2px solid rgba(#ffffff, 0);
   bottom: 0px;
   content: " ";
   display: block;
@@ -157,7 +157,7 @@
 }
 
 #navbarNav ul li a:hover {
-  color: #105a01;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -177,7 +177,7 @@
   width: 0%;
   content: ".";
   color: transparent;
-  background-image: linear-gradient(#08580c, #105a01);
+  
   height: 2px;
 }
 #navbarNav.collapse.navbar-collapse ul li a:hover:before,
@@ -197,7 +197,7 @@
   opacity: 0;
 }
 #navbarNav ul li a:hover {
-  color: #08580c;
+  color: #53c06b;
   z-index: 1;
 }
 

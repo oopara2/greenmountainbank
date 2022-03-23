@@ -20,7 +20,7 @@ const db = require("../server/model");
 const Role = db.role;
 
 db.mongoose
-  .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+  .connect("mongodb+srv://admin:adminpassword1234@greenbank.kmn0d.mongodb.net/bank?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -29,13 +29,13 @@ db.mongoose
     initial();
   })
   .catch((err) => {
-    console.error("Connection error", err);
+    console.error("Cant connect to database.", err);
     process.exit();
   });
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Bad Bank application." });
+  res.json({ message: "Welcome to Green Mountain Bank!" });
 });
 
 // routes
@@ -58,7 +58,7 @@ function initial() {
           console.log("error", err);
         }
 
-        console.log("added 'user' to roles collection");
+        console.log("added to database!");
       });
 
       new Role({
@@ -68,7 +68,7 @@ function initial() {
           console.log("error", err);
         }
 
-        console.log("added 'admin' to roles collection");
+        console.log("added to database!");
       });
     }
   });

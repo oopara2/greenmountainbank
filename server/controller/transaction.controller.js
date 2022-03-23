@@ -19,7 +19,7 @@ exports.createTransaction = (acct, amount, tranType, userID) => {
 
   trans.save((err, trans) => {
     if (err) {
-      console.log("error saving tranno");
+      console.log("CANT SAVE TRANSACTION AT THIS TIME");
       return;
     }
     console.log("trans: " + trans);
@@ -53,7 +53,7 @@ exports.getUserTrans = (req, res) => {
             }
             res.json({
               status: "success",
-              message: "Transactions found!",
+              message: "SUCCESS",
               data: { transactions: transactionsList },
             });
           }

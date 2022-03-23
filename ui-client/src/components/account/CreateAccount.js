@@ -17,7 +17,7 @@ function CreateAccount() {
   function validate(field, label) {
     let errorMessage = "";
     if (!field) {
-      errorMessage = `Error:  ${label} is required`;
+      errorMessage = `Error:  ${label} is required!`;
       setStatus(errorMessage);
       return false;
     }
@@ -26,13 +26,13 @@ function CreateAccount() {
       label === "Email" &&
       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(field)
     ) {
-      errorMessage = `Error: Email has an invalid format`;
+      errorMessage = `Error: Email is in wrong format!`;
       setStatus(errorMessage);
       return false;
     }
     // validate password
     if (label === "Password" && field.length < 8) {
-      errorMessage = `Error: Password should have at least 8 characters`;
+      errorMessage = `Error: Your password should be at least 8 characters!`;
       setStatus(errorMessage);
       return false;
     }
@@ -74,7 +74,7 @@ function CreateAccount() {
             error.response.data.message) ||
           error.message ||
           error.toString();
-        console.log("error: " + resMessage);
+        console.log("Error: " + resMessage);
         setStatus(resMessage);
       }
     );
