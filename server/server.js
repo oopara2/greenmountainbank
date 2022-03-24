@@ -1,15 +1,18 @@
 const express = require("express");
 const cors = require("cors");
 const dbConfig = require("../server/config/db.config");
-
 const app = express();
+require('dotenv').config();
 
-var corsOptions = {
+/*var corsOptions = {
   origin: "http://localhost:3000",
 };
 
 app.use(cors(corsOptions));
+*/
 
+//gives access to every URL and request method
+app.use(cors())
 // parse requests of content-type - application/json
 app.use(express.json());
 
@@ -33,7 +36,7 @@ db.mongoose
     process.exit();
   });
 
-// simple route
+// Home
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Green Mountain Bank!" });
 });
@@ -43,7 +46,7 @@ require("../server/routes/auth.routes")(app);
 require("../server/routes/user.routes")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || '3001';
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
